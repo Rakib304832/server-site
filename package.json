@@ -1,0 +1,36 @@
+{
+  "name": "server-site",
+  "version": "0.0.1",
+  "description": "my api",
+  "license": "ISC",
+  "author": "rakib",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@heroui/react": "^3.2.7",
+    "better-auth": "^1.7.15",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.8.0",
+    "mongoose": "^9.11.4",
+    "pdfkit": "^0.20.2",
+    "react-hot-toast": "^2.6.1",
+    "sonner": "^2.0.8",
+    "swiper": "^14.4.0"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
