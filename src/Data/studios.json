@@ -9,34 +9,24 @@
     "location": "Downtown, Los Angeles, CA",
     "rating": 4.9,
     "reviewsCount": 128,
-    "image": "https://ibb.co.com/ZzCZyZz2",
-    "gallery": ["https://ibb.co.com/ZzCZyZz2"],
-    "amenities": ["Natural Light", "Seamless Backdrop", "Wi-Fi", "Parking", "Kitchenette"],
+    "image": "https://i.ibb.co.com/d4yhnh4m/39a9d8fb1da012f2d2e325254a86dcae.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/d4yhnh4m/39a9d8fb1da012f2d2e325254a86dcae.jpg"
+    ],
+    "amenities": [
+      "Natural Light",
+      "Seamless Backdrop",
+      "Wi-Fi",
+      "Parking",
+      "Kitchenette"
+    ],
     "overview": "A bright, airy loft with floor-to-ceiling windows and a seamless white cyc wall. Ideal for portraits, product shoots, and lifestyle content.",
     "ownerName": "Maya Chen",
     "ownerEmail": "maya@studiospace.demo",
     "ownerPhoto": "https://i.pravatar.cc/150?img=47",
     "createdAt": "2026-01-10T09:00:00.000Z"
   },
-  {
-    "_id": "stu_002",
-    "title": "Blackbox Stage 04",
-    "category": "Film Stage",
-    "hourlyRate": 180,
-    "securityDeposit": 300,
-    "maxCapacity": 20,
-    "location": "Burbank, CA",
-    "rating": 4.8,
-    "reviewsCount": 94,
-    "image": "https://ibb.co.com/ksXPM4vk",
-    "gallery": ["https://ibb.co.com/ksXPM4vk"],
-    "amenities": ["Blackout Curtains", "Lighting Rig", "Green Screen", "Parking", "Sound Isolation"],
-    "overview": "A fully blacked-out sound stage with a rigged grid, green screen, and controllable lighting. Built for cinematic shoots and music videos.",
-    "ownerName": "Daniel Ortiz",
-    "ownerEmail": "daniel@studiospace.demo",
-    "ownerPhoto": "https://i.pravatar.cc/150?img=12",
-    "createdAt": "2026-01-14T10:30:00.000Z"
-  },
+  
   {
     "_id": "stu_003",
     "title": "The Conversation Room",
@@ -47,9 +37,17 @@
     "location": "Silver Lake, Los Angeles, CA",
     "rating": 4.7,
     "reviewsCount": 76,
-    "image": "https://ibb.co.com/bgg7H6rB",
-    "gallery": ["https://ibb.co.com/bgg7H6rB"],
-    "amenities": ["Acoustic Treatment", "Dual Mics", "Mixer", "Wi-Fi", "Coffee Bar"],
+    "image": "https://i.ibb.co.com/3yykfT0N/images-2.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/3yykfT0N/images-2.jpg"
+    ],
+    "amenities": [
+      "Acoustic Treatment",
+      "Dual Mics",
+      "Mixer",
+      "Wi-Fi",
+      "Coffee Bar"
+    ],
     "overview": "A warm, acoustically treated room with two broadcast mics and a mixing desk. Perfect for interviews, solo episodes, and small panels.",
     "ownerName": "Priya Nair",
     "ownerEmail": "priya@studiospace.demo",
@@ -66,9 +64,17 @@
     "location": "Nashville, TN",
     "rating": 4.8,
     "reviewsCount": 61,
-    "image": "https://ibb.co.com/BHHccXDz",
-    "gallery": ["https://ibb.co.com/BHHccXDz"],
-    "amenities": ["Vintage Console", "Tape Machine", "Grand Piano", "Isolation Booth", "Parking"],
+    "image": "https://i.ibb.co.com/gbbmm51j/images-3.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/gbbmm51j/images-3.jpg"
+    ],
+    "amenities": [
+      "Vintage Console",
+      "Tape Machine",
+      "Grand Piano",
+      "Isolation Booth",
+      "Parking"
+    ],
     "overview": "A recording suite built around a vintage analog console and tape machine. Great for tracking bands, vocals, and warm-sounding demos.",
     "ownerName": "Liam Brooks",
     "ownerEmail": "liam@studiospace.demo",
@@ -85,9 +91,17 @@
     "location": "Brooklyn, NY",
     "rating": 4.6,
     "reviewsCount": 49,
-    "image": "https://ibb.co.com/zhtw58wq",
-    "gallery": ["https://ibb.co.com/zhtw58wq"],
-    "amenities": ["Pottery Wheels", "Kiln Access", "Work Tables", "Wi-Fi", "Storage Lockers"],
+    "image": "https://i.ibb.co.com/6Rq5Zv5j/images-4.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/6Rq5Zv5j/images-4.jpg"
+    ],
+    "amenities": [
+      "Pottery Wheels",
+      "Kiln Access",
+      "Work Tables",
+      "Wi-Fi",
+      "Storage Lockers"
+    ],
     "overview": "A hands-on art space with pottery wheels, a kiln, and large work tables. Suited to ceramics classes, art workshops, and creative retreats.",
     "ownerName": "Sofia Rossi",
     "ownerEmail": "sofia@studiospace.demo",
@@ -104,9 +118,17 @@
     "location": "Austin, TX",
     "rating": 4.9,
     "reviewsCount": 112,
-    "image": "https://ibb.co.com/VWLCMRnz",
-    "gallery": ["https://ibb.co.com/VWLCMRnz"],
-    "amenities": ["White Cyc Wall", "Softbox Kit", "Changing Room", "Wi-Fi", "Parking"],
+    "image": "https://i.ibb.co.com/fYXNrf6y/images-5.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/fYXNrf6y/images-5.jpg"
+    ],
+    "amenities": [
+      "White Cyc Wall",
+      "Softbox Kit",
+      "Changing Room",
+      "Wi-Fi",
+      "Parking"
+    ],
     "overview": "A clean white studio with a sweeping cyc wall and a full softbox kit. Designed for fashion, beauty, and e-commerce photography.",
     "ownerName": "Ethan Park",
     "ownerEmail": "ethan@studiospace.demo",
@@ -123,9 +145,17 @@
     "location": "Nashville, TN",
     "rating": 4.7,
     "reviewsCount": 58,
-    "image": "https://ibb.co.com/3m6mf9XW",
-    "gallery": ["https://ibb.co.com/3m6mf9XW"],
-    "amenities": ["Lighting Rig", "Sound Isolation", "Cyc Wall", "Parking", "Wi-Fi"],
+    "image": "https://i.ibb.co.com/LdjdQXw6/images-6.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/LdjdQXw6/images-6.jpg"
+    ],
+    "amenities": [
+      "Lighting Rig",
+      "Sound Isolation",
+      "Cyc Wall",
+      "Parking",
+      "Wi-Fi"
+    ],
     "overview": "A flexible sound stage with a height-adjustable grid and sound isolation. Suited to short films, commercials, and live performance recording.",
     "ownerName": "Marcus Hill",
     "ownerEmail": "marcus@studiospace.demo",
@@ -142,9 +172,17 @@
     "location": "Austin, TX",
     "rating": 4.6,
     "reviewsCount": 67,
-    "image": "https://ibb.co.com/rR0GQmKb",
-    "gallery": ["https://ibb.co.com/rR0GQmKb"],
-    "amenities": ["Dual Mics", "Video Camera Setup", "Lounge Seating", "Wi-Fi", "Snack Bar"],
+    "image": "https://i.ibb.co.com/G4pvd0fs/images-7.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/G4pvd0fs/images-7.jpg"
+    ],
+    "amenities": [
+      "Dual Mics",
+      "Video Camera Setup",
+      "Lounge Seating",
+      "Wi-Fi",
+      "Snack Bar"
+    ],
     "overview": "A relaxed lounge with broadcast mics, a three-camera video setup, and comfortable seating. Good for video podcasts and roundtable talks.",
     "ownerName": "Jess Monroe",
     "ownerEmail": "jess@studiospace.demo",
@@ -161,9 +199,17 @@
     "location": "Brooklyn, NY",
     "rating": 4.5,
     "reviewsCount": 39,
-    "image": "https://ibb.co.com/VcgZzvgK",
-    "gallery": ["https://ibb.co.com/VcgZzvgK"],
-    "amenities": ["Cyc Wall", "Continuous Lighting", "Props Closet", "Parking", "Wi-Fi"],
+    "image": "https://i.ibb.co.com/rRxSzZxW/images-8.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/rRxSzZxW/images-8.jpg"
+    ],
+    "amenities": [
+      "Cyc Wall",
+      "Continuous Lighting",
+      "Props Closet",
+      "Parking",
+      "Wi-Fi"
+    ],
     "overview": "A compact photo studio with a curved cyc wall and continuous lights. A good fit for portrait sessions and small product campaigns.",
     "ownerName": "Aisha Khan",
     "ownerEmail": "aisha@studiospace.demo",
@@ -180,9 +226,17 @@
     "location": "Los Angeles, CA",
     "rating": 4.8,
     "reviewsCount": 83,
-    "image": "https://ibb.co.com/4wr1dRBg",
-    "gallery": ["https://ibb.co.com/4wr1dRBg"],
-    "amenities": ["Upright Piano", "Amp Room", "Drum Kit", "Isolation Booth", "Parking"],
+    "image": "https://i.ibb.co.com/twrLXpyP/images-9.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/twrLXpyP/images-9.jpg"
+    ],
+    "amenities": [
+      "Upright Piano",
+      "Amp Room",
+      "Drum Kit",
+      "Isolation Booth",
+      "Parking"
+    ],
     "overview": "A rehearsal and recording suite with an amp room, drum kit, and piano. Built for bands, singers, and songwriters who want to track a full set.",
     "ownerName": "Tom Reyes",
     "ownerEmail": "tom@studiospace.demo",
@@ -199,9 +253,17 @@
     "location": "Portland, OR",
     "rating": 4.7,
     "reviewsCount": 45,
-    "image": "https://ibb.co.com/Q7DCzrS6",
-    "gallery": ["https://ibb.co.com/Q7DCzrS6"],
-    "amenities": ["Easels", "Paint Storage", "Natural Light", "Wi-Fi", "Clean-up Sink"],
+    "image": "https://i.ibb.co.com/TDWbpmjH/images-10.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/TDWbpmjH/images-10.jpg"
+    ],
+    "amenities": [
+      "Easels",
+      "Paint Storage",
+      "Natural Light",
+      "Wi-Fi",
+      "Clean-up Sink"
+    ],
     "overview": "A bright art workshop with easels, paint storage, and a clean-up sink. Suited to painting classes, live drawing sessions, and group art projects.",
     "ownerName": "Hana Sato",
     "ownerEmail": "hana@studiospace.demo",
@@ -218,9 +280,17 @@
     "location": "Chicago, IL",
     "rating": 4.5,
     "reviewsCount": 34,
-    "image": "https://ibb.co.com/TDRqgP2F",
-    "gallery": ["https://ibb.co.com/TDRqgP2F"],
-    "amenities": ["Acoustic Panels", "Single Mic Setup", "Wi-Fi", "Parking", "Water Station"],
+    "image": "https://i.ibb.co.com/8n247PsS/images-11.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/8n247PsS/images-11.jpg"
+    ],
+    "amenities": [
+      "Acoustic Panels",
+      "Single Mic Setup",
+      "Wi-Fi",
+      "Parking",
+      "Water Station"
+    ],
     "overview": "A quiet, softly lit room with acoustic panels and a single mic setup. Ideal for solo podcasts and voice-over recordings.",
     "ownerName": "Noah Kim",
     "ownerEmail": "noah@studiospace.demo",
@@ -237,9 +307,17 @@
     "location": "Miami, FL",
     "rating": 4.9,
     "reviewsCount": 101,
-    "image": "https://ibb.co.com/xt2r3RvT",
-    "gallery": ["https://ibb.co.com/xt2r3RvT"],
-    "amenities": ["Cyc Wall", "Studio Strobes", "Makeup Station", "Changing Room", "Parking"],
+    "image": "https://i.ibb.co.com/Q3JxX1Bw/images.jpg",
+    "gallery": [
+      "https://i.ibb.co.com/Q3JxX1Bw/images.jpg"
+    ],
+    "amenities": [
+      "Cyc Wall",
+      "Studio Strobes",
+      "Makeup Station",
+      "Changing Room",
+      "Parking"
+    ],
     "overview": "A full-service photo studio with strobes, a makeup station, and a large cyc wall. Built for editorial, fashion, and campaign shoots.",
     "ownerName": "Elena Vasquez",
     "ownerEmail": "elena@studiospace.demo",
