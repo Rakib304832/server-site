@@ -1,10 +1,6 @@
 {
  
     "framework": "express",
-    "functions": {
-      "src/index.ts": {
-        "node": "18x"
-      }
-    }
+   
   
 }
