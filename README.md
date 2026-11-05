@@ -92,6 +92,7 @@ npm run seed      # Reset studios and create the demo examiner account
 *The seed also assigns `stu_001` to the demo user so listing management can be tested immediately.*
 
 📁 Root Directory: server-site/
+```
 server-site/
 ├── package.json          # Dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
@@ -118,7 +119,8 @@ server-site/
 │   └── utils/           # Utility utilities
 │       └── jwt.ts           # JWT sign/verify utilities
 ├── README.md            # API documentation with challenge details
-└── package-lock.json    # Lock file for dependencies
+└── package-lock.json    # Lock file for dependencies 
+```
 🗂️ Detailed Module Breakdown
 src/index.ts - Main Application
 - Express app setup with CORS (credentials: true)
