@@ -351,7 +351,7 @@ app.post("/api/bookings", async (req, res) => {
 
   const conflict = await bookingsCollection().findOne({
     studioId: String(studio._id),
-    status: { $in: ["Pending", "Confirmed"] },
+    status: "Confirmed",
     startTime: { $lt: end },
     endTime: { $gt: start },
   } as never);
