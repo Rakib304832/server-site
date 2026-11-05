@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from "express";
-import { verify } from "jsonwebtoken";
+import type { NextFunction, Request, Response } from "express";
+import jwt from "jsonwebtoken";
 import { HttpError } from "../utils/errorHandler";
 
 declare global {
@@ -17,16 +17,22 @@ declare global {
 
 export const verifyJwt = (req: Request, res: Response, next: NextFunction) => {
   try {
-    const cookie = req.cookies["connect.sid"];
-    if (!cookie) {
+    const authHeader = req.headers.authorization;
+    const cookieToken = req.cookies?.["connect.sid"];
+    const token =
+      (authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : undefined) ??
+      cookieToken;
+
+    if (!token) {
       throw new HttpError(401, "Please log in to continue.");
     }
 
-    // Better Auth stores session in cookie, verify it
-    const payload = verify(
-      cookie,
-      process.env.JWT_SECRET as string
-    ) as { id: string; name: string; email: string; image?: string };
+    const payload = jwt.verify(token, process.env.JWT_SECRET as string) as {
+      id: string;
+      name: string;
+      email: string;
+      image?: string;
+    };
 
     req.user = {
       id: payload.id,
@@ -36,10 +42,15 @@ export const verifyJwt = (req: Request, res: Response, next: NextFunction) => {
     };
 
     next();
-  } catch (error: any) {
-    if (error.name === "TokenExpiredError") {
+  } catch (error: unknown) {
+    if (
+      error instanceof Error &&
+      "name" in error &&
+      error.name === "TokenExpiredError"
+    ) {
       throw new HttpError(401, "Session expired. Please log in again.");
     }
+
     throw new HttpError(401, "Invalid session token.");
   }
 };

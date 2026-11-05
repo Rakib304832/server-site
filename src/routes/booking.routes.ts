@@ -1,8 +1,8 @@
-import { Router, Request, Response, NextFunction } from "express";
+import { Router, type Request, type Response, type NextFunction } from "express";
 import Booking from "../models/booking.model";
 import Studio from "../models/studio.model";
 import { verifyJwt } from "../middleware/verifyJwt";
-import { HttpError } from "../utils/jwt";
+import { HttpError } from "../utils/errorHandler";
 
 const router = Router();
 

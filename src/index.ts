@@ -1,11 +1,11 @@
 import "dotenv/config";
-import express, { type Request, type Response } from "express";
+import cookieParser from "cookie-parser";
 import cors from "cors";
+import express from "express";
 import mongoose from "mongoose";
-import "./config/db";
-import studioRoutes from "./routes/studio.routes";
+import { errorHandler } from "./middleware/errorHandler";
 import bookingRoutes from "./routes/booking.routes";
-import errorHandler from "./middleware/errorHandler";
+import studioRoutes from "./routes/studio.routes";
 
 const app = express();
 const PORT = Number(process.env.PORT ?? 5000);
@@ -18,6 +18,7 @@ app.use(
     credentials: true,
   })
 );
+app.use(cookieParser());
 app.use(express.json({ limit: "2mb" }));
 
 // Routes

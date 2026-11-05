@@ -1,13 +1,5 @@
-import { HttpError } from "../utils/jwt";
-
-export class HttpError extends Error {
-  status: number;
-
-  constructor(status: number, message: string) {
-    super(message);
-    this.status = status;
-  }
-}
+import type { NextFunction, Request, Response } from "express";
+import { HttpError } from "../utils/errorHandler";
 
 export const errorHandler = (
   err: HttpError | Error,
@@ -19,6 +11,6 @@ export const errorHandler = (
     return res.status(err.status).json({ message: err.message });
   }
 
-  console.error(err.stack);
+  console.error(err instanceof Error ? err.stack : err);
   res.status(500).json({ message: "Something went wrong!" });
 };
