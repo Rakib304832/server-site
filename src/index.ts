@@ -1,13 +1,27 @@
 import "dotenv/config";
+import { toNodeHandler } from "better-auth/node";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import express from "express";
 import mongoose from "mongoose";
+import { auth } from "./lib/auth.js";
+import { trustedOrigins } from "./lib/trustedOrigins.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import bookingRoutes from "./routes/booking.routes.js";
 import studioRoutes from "./routes/studio.routes.js";
 
 const app = express();
+app.use(
+  cors({
+    origin: trustedOrigins,
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
+app.all("/api/auth/*splat", toNodeHandler(auth));
+
 const PORT = Number(process.env.PORT ?? 5000);
 let connectionPromise: Promise<void> | undefined;
 
@@ -32,15 +46,6 @@ async function connectToDatabase() {
   await connectionPromise;
 }
 
-// CORS configuration with credentials for HTTP-only cookies
-app.use(
-  cors({
-    origin: process.env.CLIENT_ORIGINS
-      ? process.env.CLIENT_ORIGINS.split(",").map((o) => o.trim()).filter(Boolean)
-      : ["http://localhost:3000"],
-    credentials: true,
-  })
-);
 app.use(cookieParser());
 app.use(express.json({ limit: "2mb" }));
 

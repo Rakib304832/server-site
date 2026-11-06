@@ -38,11 +38,11 @@ npm run dev            # http://localhost:5000
 | --- | --- | --- |
 | `MONGODB_URI` | Yes | MongoDB connection string shared with the Next.js client |
 | `BETTER_AUTH_SECRET` | Yes | Secret used to sign Better Auth sessions |
-| `BETTER_AUTH_URL` | Yes | Client origin, normally `http://localhost:3000` |
+| `BETTER_AUTH_URL` | No | Better Auth API base URL; defaults to the Vercel deployment URL or `http://localhost:5000` |
 | `PORT` | No | API port, defaults to `5000` |
-| `CLIENT_ORIGINS` | No | Comma-separated production origins allowed by CORS |
-| `GOOGLE_CLIENT_ID` | No | Enables Google sign-in |
-| `GOOGLE_CLIENT_SECRET` | No | Enables Google sign-in |
+| `CLIENT_ORIGINS` | No | Comma-separated extra client origins allowed by CORS and Better Auth; `https://client-site-ui.vercel.app` is included by default |
+| `GOOGLE_CLIENT_ID` | No | Google OAuth client ID; enables Google sign-in when paired with `GOOGLE_CLIENT_SECRET` |
+| `GOOGLE_CLIENT_SECRET` | No | Google OAuth client secret; enables Google sign-in when paired with `GOOGLE_CLIENT_ID` |
 | `JWT_SECRET` | Yes | Secret for JWT token signing (used in verifyJwt middleware) |
 
 **Generate a secret with:**
