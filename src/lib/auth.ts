@@ -17,16 +17,26 @@ if (!secret) {
 const client = new MongoClient(databaseUrl);
 const googleClientId = process.env.GOOGLE_CLIENT_ID;
 const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
+const isProduction = process.env.NODE_ENV === "production";
+const productionBaseURL = "https://server-site-ruby.vercel.app";
+const vercelURL = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : undefined;
+
+const baseURL =
+  process.env.VERCEL_ENV === "preview" && vercelURL
+    ? vercelURL
+    : process.env.BETTER_AUTH_URL ?? productionBaseURL;
 
 export const auth = betterAuth({
   database: mongodbAdapter(client.db()),
   secret,
 
-  // Server নিজের public address। Google callback ও অন্যান্য link এখান থেকে তৈরি হবে।
-  baseURL: "https://server-site-ruby.vercel.app",
+  // Server-এর public address। Google callback ও অন্যান্য link এখান থেকে তৈরি হবে।
+  baseURL,
 
   // কোন client domain এই auth server-কে ডাকতে পারবে
-  trustedOrigins,
+  trustedOrigins: [...new Set([baseURL, ...trustedOrigins])],
 
   emailAndPassword: {
     enabled: true,
@@ -47,12 +57,12 @@ export const auth = betterAuth({
 
   advanced: {
     // Production-এ secure cookie ব্যবহার হবে
-    useSecureCookies: process.env.NODE_ENV === "production",
+    useSecureCookies: isProduction,
 
-    // Client ও server আলাদা domain-এ থাকায় cross-site cookie-র জন্য এই সেটিং লাগবে
+    // Client ও server আলাদা domain-এ থাকায় production-এ cross-site cookie লাগবে
     defaultCookieAttributes: {
-      sameSite: "none",
-      secure: true,
+      sameSite: isProduction ? "none" : "lax",
+      secure: isProduction,
     },
   },
 });

@@ -5,20 +5,33 @@ import cors from "cors";
 import express from "express";
 import mongoose from "mongoose";
 import { auth } from "./lib/auth.js";
-import { trustedOrigins } from "./lib/trustedOrigins.js";
+import { isTrustedOrigin } from "./lib/trustedOrigins.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import bookingRoutes from "./routes/booking.routes.js";
 import studioRoutes from "./routes/studio.routes.js";
 
 const app = express();
+app.set("trust proxy", 1);
+
 app.use(
   cors({
-    origin: trustedOrigins,
+    origin(origin, callback) {
+      // Requests without an Origin header are not browser CORS requests.
+      callback(null, isTrustedOrigin(origin));
+    },
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+app.get("/", (_req, res) => {
+  res.json({ service: "studio-space-api", status: "ok" });
+});
+
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
 
 app.all("/api/auth/*splat", toNodeHandler(auth));
 
@@ -62,9 +75,14 @@ app.use(async (_req, _res, next) => {
 app.use("/api/studios", studioRoutes);
 app.use("/api/bookings", bookingRoutes);
 
+app.use((_req, res) => {
+  res.status(404).json({ message: "API route not found." });
+});
+
 // Error handler (must be last)
 app.use(errorHandler);
 
+// Vercel's @vercel/node runtime uses this default export as the request handler.
 export default app;
 
 async function start() {
@@ -73,7 +91,7 @@ async function start() {
     console.log("MongoDB connected");
 
     app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+      console.log(`Server listening on port ${PORT}`);
     });
   } catch (error) {
     console.error("Failed to connect to DB", error);
